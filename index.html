@@ -230,6 +230,14 @@
       justify-content: center;
       align-items: center;
       background: radial-gradient(circle, rgba(236, 72, 153, 0.28), transparent 55%);
+      overflow: hidden;
+    }
+
+    .product-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .px-mark {
@@ -286,10 +294,20 @@
     }
 
     .product-button {
+      display: block;
       width: 100%;
       background: #fff;
       color: #000;
       margin-top: 18px;
+      text-align: center;
+      border-radius: 16px;
+      padding: 14px 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      cursor: pointer;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      white-space: normal;
     }
 
     .product-button:hover {
@@ -438,7 +456,7 @@
         <div class="products">
           <article class="product-card">
             <div class="product-art">
-              <img src="assets/crop.jpg" alt="Peekaboo Crop Top" style="width:100%;height:100%;object-fit:cover;" />
+              <img src="assets/crop.jpg" alt="Peekaboo Crop Top" />
             </div>
             <div class="product-info">
               <div class="product-title-row"><h3>Peekaboo Signature Tee</h3><span class="price">$28</span></div>
@@ -449,7 +467,7 @@
 
           <article class="product-card">
             <div class="product-art">
-              <img src="assets/Hoodie.jpg" alt="Peekaboo Hoodie" style="width:100%;height:100%;object-fit:cover;" />
+              <img src="assets/Hoodie.jpg" alt="Peekaboo Hoodie" />
             </div>
             <div class="product-info">
               <div class="product-title-row"><h3>Pretty Face Violent Hands Hoodie</h3><span class="price">$55</span></div>
@@ -460,7 +478,7 @@
 
           <article class="product-card">
             <div class="product-art">
-              <img src="assets/Shorts.jpg" alt="Peekaboo Shorts" style="width:100%;height:100%;object-fit:cover;" />
+              <img src="assets/Shorts.jpg" alt="Peekaboo Shorts" />
             </div>
             <div class="product-info">
               <div class="product-title-row"><h3>Respect Earned Crop Tank</h3><span class="price">$32</span></div>
@@ -471,7 +489,7 @@
 
           <article class="product-card">
             <div class="product-art">
-              <img src="assets/jacket.jpg" alt="Peekaboo Jacket" style="width:100%;height:100%;object-fit:cover;" />
+              <img src="assets/jacket.jpg" alt="Peekaboo Jacket" />
             </div>
             <div class="product-info">
               <div class="product-title-row"><h3>Built Different Snapback</h3><span class="price">$26</span></div>
