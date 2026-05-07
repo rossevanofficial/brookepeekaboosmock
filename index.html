@@ -189,4 +189,324 @@
 
     .section-label {
       color: #ec4899;
-      text-transform: u
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin-top: 10px;
+      font-size: clamp(36px, 6vw, 58px);
+      text-transform: uppercase;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .section-intro {
+      color: #a1a1aa;
+      max-width: 600px;
+      margin-top: 14px;
+    }
+
+    .products {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product-card,
+    .story-card {
+      border: 1px solid rgba(236, 72, 153, 0.25);
+      background: #09090b;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(219, 39, 119, 0.08);
+    }
+
+    .product-art {
+      height: 210px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.28), transparent 55%);
+    }
+
+    .px-mark {
+      border: 1px solid rgba(236, 72, 153, 0.35);
+      background: #000;
+      border-radius: 24px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .px-mark strong {
+      display: block;
+      color: #ec4899;
+      font-size: 42px;
+      line-height: 1;
+    }
+
+    .px-mark small {
+      display: block;
+      color: #d4d4d8;
+      margin-top: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 900;
+    }
+
+    .product-info {
+      padding: 22px;
+    }
+
+    .product-title-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .product-title-row h3 {
+      font-size: 19px;
+      line-height: 1.1;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .price {
+      color: #f472b6;
+      font-weight: 900;
+    }
+
+    .product-info p {
+      color: #a1a1aa;
+      margin-top: 14px;
+      min-height: 96px;
+      font-size: 14px;
+    }
+
+    .product-button {
+      width: 100%;
+      background: #fff;
+      color: #000;
+      margin-top: 18px;
+    }
+
+    .product-button:hover {
+      background: #fbcfe8;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .story-card {
+      padding: 30px;
+    }
+
+    .story-icon {
+      color: #ec4899;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .story-card h3 {
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .story-card p {
+      color: #a1a1aa;
+      margin-top: 14px;
+    }
+
+    .signup {
+      text-align: center;
+      border: 1px solid rgba(236, 72, 153, 0.35);
+      background: rgba(236, 72, 153, 0.12);
+      border-radius: 32px;
+      padding: 48px 24px;
+      max-width: 900px;
+    }
+
+    .signup p {
+      color: #d4d4d8;
+      margin: 18px auto 0;
+      max-width: 640px;
+    }
+
+    .email-row {
+      margin: 30px auto 0;
+      max-width: 560px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .email-row input {
+      flex: 1;
+      border: 1px solid rgba(236, 72, 153, 0.35);
+      background: #000;
+      color: white;
+      padding: 16px;
+      border-radius: 16px;
+      font-size: 16px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(236, 72, 153, 0.25);
+      padding: 28px;
+      text-align: center;
+      color: #71717a;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .products,
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .email-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">PEEKABOO</div>
+      <nav>
+        <a href="#shop">Shop</a>
+        <a href="#story">Story</a>
+        <a href="#drop">Drop Alert</a>
+      </nav>
+      <button class="cart-button">Cart</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="badge">New fightwear-inspired merch</div>
+          <h1>She don’t play. <span>She punishes.</span></h1>
+          <p>A bold streetwear storefront built around the Peekaboo identity: black canvas, hot-pink voltage, butterfly wings, fight-club attitude, and unapologetic confidence.</p>
+          <div class="hero-buttons">
+            <a class="primary-button" href="#shop">Shop the Drop</a>
+            <a class="secondary-button" href="#story">View Lookbook</a>
+          </div>
+        </div>
+
+        <div class="logo-frame">
+          <img src="assets/IMG_5278(1).PNG" alt="Peekaboo logo artwork" />
+        </div>
+      </section>
+
+      <div class="ticker">
+        <span>Undefeated</span>
+        <span>Built Different</span>
+        <span>Respect Earned</span>
+        <span>Fire Neck Brawl</span>
+        <span>Slap Fest Champ</span>
+      </div>
+
+      <section id="shop">
+        <p class="section-label">Featured Merch</p>
+        <h2>Drop One</h2>
+        <p class="section-intro">Product cards are ready for Shopify, WooCommerce, Printful, or a custom checkout integration.</p>
+
+        <div class="products">
+          <article class="product-card">
+            <div class="product-art"><div class="px-mark"><strong>PX</strong><small>Best Seller</small></div></div>
+            <div class="product-info">
+              <div class="product-title-row"><h3>Peekaboo Signature Tee</h3><span class="price">$28</span></div>
+              <p>Soft black tee with the full Peekaboo fight-butterfly artwork front and center.</p>
+              <button class="product-button">Add to Bag</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art"><div class="px-mark"><strong>PX</strong><small>Heavyweight</small></div></div>
+            <div class="product-info">
+              <div class="product-title-row"><h3>Pretty Face Violent Hands Hoodie</h3><span class="price">$55</span></div>
+              <p>A premium pullover hoodie with pink sleeve hits and a bold back graphic.</p>
+              <button class="product-button">Add to Bag</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art"><div class="px-mark"><strong>PX</strong><small>Limited Drop</small></div></div>
+            <div class="product-info">
+              <div class="product-title-row"><h3>Respect Earned Crop Tank</h3><span class="price">$32</span></div>
+              <p>Athletic cut tank with a smaller chest logo and the mantra across the back.</p>
+              <button class="product-button">Add to Bag</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art"><div class="px-mark"><strong>PX</strong><small>New</small></div></div>
+            <div class="product-info">
+              <div class="product-title-row"><h3>Built Different Snapback</h3><span class="price">$26</span></div>
+              <p>Black snapback with embroidered pink crown mark and side text detail.</p>
+              <button class="product-button">Add to Bag</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="story" class="story-grid">
+        <article class="story-card">
+          <div class="story-icon">♛</div>
+          <h3>Brand Position</h3>
+          <p>Aggressive, feminine, undefeated. The site should feel like a merch table at a neon fight carnival.</p>
+        </article>
+
+        <article class="story-card">
+          <div class="story-icon">⚡</div>
+          <h3>Visual System</h3>
+          <p>Black base, distressed white typography, hot-pink accents, gritty texture, crown and butterfly motifs.</p>
+        </article>
+
+        <article class="story-card">
+          <div class="story-icon">✉</div>
+          <h3>Launch Goal</h3>
+          <p>Capture emails before the first drop, then push visitors straight to the hero logo and featured products.</p>
+        </article>
+      </section>
+
+      <section id="drop" class="signup">
+        <h2>Enter the ring first</h2>
+        <p>Drop alerts, early access, limited restocks, and event merch announcements.</p>
+        <div class="email-row">
+          <input type="email" placeholder="Email address" />
+          <button class="email-button">Notify Me</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Peekaboo Merch. Respect earned, not given.
+    </footer>
+  </div>
+</body>
+</html>
