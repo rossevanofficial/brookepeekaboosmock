@@ -1,1 +1,177 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { ShoppingBag, Star, Shield, Zap, Mail } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
+const products = [
+  {
+    name: "Peekaboo Signature Tee",
+    price: "$28",
+    tag: "Best Seller",
+    desc: "Soft black tee with the full Peekaboo fight-butterfly artwork front and center.",
+  },
+  {
+    name: "Pretty Face Violent Hands Hoodie",
+    price: "$55",
+    tag: "Heavyweight",
+    desc: "A premium pullover hoodie with pink sleeve hits and a bold back graphic.",
+  },
+  {
+    name: "Respect Earned Crop Tank",
+    price: "$32",
+    tag: "Limited Drop",
+    desc: "Athletic cut tank with a smaller chest logo and the mantra across the back.",
+  },
+  {
+    name: "Built Different Snapback",
+    price: "$26",
+    tag: "New",
+    desc: "Black snapback with embroidered pink crown mark and side text detail.",
+  },
+];
+
+export default function PeekabooMerchSite() {
+  return (
+    <div className="min-h-screen bg-black text-white overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(236,72,153,0.22),transparent_38%),radial-gradient(circle_at_80%_20%,rgba(244,114,182,0.14),transparent_24%)]" />
+      <div className="relative z-10">
+        <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+          <div className="font-black tracking-[0.25em] text-pink-500">PEEKABOO</div>
+          <nav className="hidden gap-8 text-sm uppercase tracking-widest text-zinc-300 md:flex">
+            <a href="#shop" className="hover:text-pink-400">Shop</a>
+            <a href="#story" className="hover:text-pink-400">Story</a>
+            <a href="#drop" className="hover:text-pink-400">Drop Alert</a>
+          </nav>
+          <Button className="rounded-2xl bg-pink-600 px-5 font-bold hover:bg-pink-500">
+            <ShoppingBag className="mr-2 h-4 w-4" /> Cart
+          </Button>
+        </header>
+
+        <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-8 lg:grid-cols-[1fr_1.1fr] lg:pt-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-center lg:text-left"
+          >
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-pink-500/50 bg-pink-500/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-pink-300">
+              <Star className="h-4 w-4" /> New fightwear-inspired merch
+            </div>
+            <h1 className="text-5xl font-black uppercase leading-none tracking-tight sm:text-6xl lg:text-8xl">
+              She don’t play. <span className="text-pink-500">She punishes.</span>
+            </h1>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-zinc-300 lg:mx-0">
+              A bold streetwear storefront built around the Peekaboo identity: black canvas, hot-pink voltage, butterfly wings, fight-club attitude, and unapologetic confidence.
+            </p>
+            <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+              <Button size="lg" className="rounded-2xl bg-pink-600 px-8 py-6 text-base font-black uppercase tracking-wider hover:bg-pink-500">
+                Shop the Drop
+              </Button>
+              <Button size="lg" variant="outline" className="rounded-2xl border-pink-500/60 bg-black/40 px-8 py-6 text-base font-black uppercase tracking-wider text-white hover:bg-pink-500/10">
+                View Lookbook
+              </Button>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="relative"
+          >
+            <div className="absolute inset-8 rounded-full bg-pink-600/25 blur-3xl" />
+            <div className="relative mx-auto max-w-xl rounded-[2rem] border border-pink-500/30 bg-zinc-950/70 p-4 shadow-2xl shadow-pink-950/40">
+              <img
+                src="/mnt/data/IMG_5278(1).PNG"
+                alt="Peekaboo logo artwork"
+                className="w-full rounded-[1.5rem] object-contain"
+              />
+            </div>
+          </motion.div>
+        </section>
+
+        <section className="border-y border-pink-500/20 bg-zinc-950/80 py-5">
+          <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-10 gap-y-3 px-6 text-sm font-black uppercase tracking-[0.25em] text-pink-400">
+            <span>Undefeated</span>
+            <span>Built Different</span>
+            <span>Respect Earned</span>
+            <span>Fire Neck Brawl</span>
+            <span>Slap Fest Champ</span>
+          </div>
+        </section>
+
+        <section id="shop" className="mx-auto max-w-7xl px-6 py-20">
+          <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="font-black uppercase tracking-[0.25em] text-pink-500">Featured Merch</p>
+              <h2 className="mt-3 text-4xl font-black uppercase md:text-5xl">Drop One</h2>
+            </div>
+            <p className="max-w-xl text-zinc-400">Product cards are ready for Shopify, WooCommerce, or a custom checkout integration.</p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {products.map((product) => (
+              <Card key={product.name} className="group overflow-hidden rounded-3xl border-pink-500/20 bg-zinc-950 text-white shadow-xl shadow-pink-950/10">
+                <CardContent className="p-0">
+                  <div className="flex h-56 items-center justify-center bg-[radial-gradient(circle,rgba(236,72,153,0.25),transparent_55%)] p-8">
+                    <div className="rounded-3xl border border-pink-500/30 bg-black px-6 py-8 text-center transition group-hover:scale-105">
+                      <div className="text-4xl font-black text-pink-500">PX</div>
+                      <div className="mt-2 text-xs font-bold uppercase tracking-[0.25em] text-zinc-300">{product.tag}</div>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-start justify-between gap-4">
+                      <h3 className="text-xl font-black uppercase leading-tight">{product.name}</h3>
+                      <span className="font-black text-pink-400">{product.price}</span>
+                    </div>
+                    <p className="mt-4 min-h-20 text-sm leading-6 text-zinc-400">{product.desc}</p>
+                    <Button className="mt-6 w-full rounded-2xl bg-white font-black uppercase tracking-wider text-black hover:bg-pink-200">
+                      Add to Bag
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section id="story" className="mx-auto grid max-w-7xl gap-6 px-6 pb-20 lg:grid-cols-3">
+          {[
+            [Shield, "Brand Position", "Aggressive, feminine, undefeated. The site should feel like a merch table at a neon fight carnival."],
+            [Zap, "Visual System", "Black base, distressed white typography, hot-pink accents, gritty texture, crown and butterfly motifs."],
+            [Mail, "Launch Goal", "Capture emails before the first drop, then push visitors straight to the hero logo and featured products."],
+          ].map(([Icon, title, text]) => (
+            <Card key={title} className="rounded-3xl border-pink-500/20 bg-zinc-950/90 text-white">
+              <CardContent className="p-8">
+                <Icon className="h-10 w-10 text-pink-500" />
+                <h3 className="mt-6 text-2xl font-black uppercase">{title}</h3>
+                <p className="mt-4 leading-7 text-zinc-400">{text}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </section>
+
+        <section id="drop" className="mx-auto max-w-5xl px-6 pb-24 text-center">
+          <div className="rounded-[2rem] border border-pink-500/30 bg-pink-500/10 p-8 md:p-12">
+            <h2 className="text-4xl font-black uppercase md:text-6xl">Enter the ring first</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-zinc-300">Drop alerts, early access, limited restocks, and event merch announcements.</p>
+            <div className="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row">
+              <input
+                className="min-h-14 flex-1 rounded-2xl border border-pink-500/30 bg-black px-5 text-white outline-none placeholder:text-zinc-500 focus:border-pink-400"
+                placeholder="Email address"
+              />
+              <Button className="min-h-14 rounded-2xl bg-pink-600 px-8 font-black uppercase tracking-wider hover:bg-pink-500">
+                Notify Me
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        <footer className="border-t border-pink-500/20 px-6 py-8 text-center text-sm text-zinc-500">
+          © 2026 Peekaboo Merch. Respect earned, not given.
+        </footer>
+      </div>
+    </div>
+  );
+}
